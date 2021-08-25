@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: go-web-server
+  name: go-rest-api
   namespace: tutorial
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: go-web-server
+      app: go-rest-api
   template:
     metadata:
       labels:
-        app: go-web-server
+        app: go-rest-api
     spec:
       containers:
       - name: app
-        image: ecojuntak/go-web-server:v0.1
+        image: ecojuntak/go-rest-api:v0.0.1
